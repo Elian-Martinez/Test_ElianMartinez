@@ -1,0 +1,35 @@
+﻿@model Test_ElianMartinez.Models.Person
+    <link href="~/css/estilos.css" type="text/css" rel="stylesheet" />
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card shadow">
+            <div class="card-body">
+                <div class="text-justify">
+                    <div class="table align-bottom">
+                        <h1>Agregar Persona</h1>
+                        <form method="post" asp-action="Create">
+                            <div class="form-group">
+                                <label asp-for="Name" class="text-right"> Nombre</label>
+                                <input asp-for="Name" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="DateOfBirth" class="control-label">Fecha de Nacimiento</label>
+                                <input asp-for="DateOfBirth" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Crear" class="btn btn-primary" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

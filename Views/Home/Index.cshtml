@@ -1,0 +1,28 @@
+﻿@model List<Test_ElianMartinez.Models.Person>
+    <link href="~/css/estilos.css" type="text/css" rel="stylesheet" />
+<div class="Text">
+    <h1 class="display-4">Test_BanReservas_ElianMartinez</h1>
+</div>
+<div class="registro">
+    <table class=" table table-bordered">
+        <thead>
+            <tr>
+                <th>Codigo</th>
+                <th>Nombre</th>
+                <th>Fecha de Nacimiento</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Person person in Model)
+            {
+                <tr>
+                    <td>@person.Id</td>
+                    <td>@person.Name</td>
+                    <td>@person.DateOfBirth</td>
+                    <td><a asp-controller="Home" asp-action="Index" asp-route-id="@person.Id" class="btn btn-danger">Eliminar</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
